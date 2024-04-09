@@ -116,7 +116,6 @@ img {
 
 .current {
   position: relative;
-  color: #404bbf;
   transition-property: background-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -193,7 +192,7 @@ img {
 }
 
 .mob-menu {
-    opacity: 0;
+  opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
@@ -250,6 +249,23 @@ img {
 .mob-icons {
   display: flex;
   fill: #f4f4fd;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .menu-contact-item {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  .menu-contact-item:first-child {
+    color: #4d5ae5;
+  }
+
+  .mob-menu-item .current {
+    color: #404bbf;
+  }
 }
 
 .hero {
@@ -365,9 +381,8 @@ img {
 .team-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 72px;
-  padding-left: 12px;
-  padding-right: 12px;
 }
 
 .team-item {
@@ -403,8 +418,6 @@ img {
 .team-icon-list {
   display: flex;
   gap: 24px;
-  padding-right: 16px;
-  padding-left: 16px;
   justify-content: center;
 }
 
@@ -687,7 +700,7 @@ footer .logo {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  position: absolute;  
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -846,8 +859,8 @@ footer .logo {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-        display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .check-link {
@@ -890,9 +903,9 @@ footer .logo {
 
   .mob-menu {
     opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+    visibility: hidden;
+    pointer-events: none;
+  }
 
   .header-container {
     display: flex;
@@ -1008,7 +1021,7 @@ footer .logo {
   .footer-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
     padding-left: 108px;
     text-align: start;
   }
@@ -1026,8 +1039,17 @@ footer .logo {
   }
 
   .modal {
-  width: 408px;
-  min-height: 584px;
+    width: 408px;
+    min-height: 584px;
+  }
+
+  .footer-container-logo {
+    margin-bottom: 0;
+  }
+
+  .footer-social-media {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1157,6 +1179,10 @@ footer .logo {
 
   .footer-form {
     display: flex;
+  }
+
+  .footer-label {
+    margin-bottom: 0;
   }
 
   .footer-email {
